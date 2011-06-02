@@ -1,3 +1,12 @@
 [user]
 	email = dtcrsby@gmail.com
 	name = Dafydd Crosby
+[color]
+	ui = auto
+[core]
+	editor = vim
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpserverport = 587
+	smtpencryption = tls
+	smtpuser = dtcrsby@gmail.com
