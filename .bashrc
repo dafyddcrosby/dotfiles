@@ -43,3 +43,7 @@ export EDITOR=/usr/bin/vim
 export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME=Dafydd Crosby
 alias "ls"="ls --color=auto"
+
+if [ -f /etc/bash_completion ]; then
+ . /etc/bash_completion
+fi
