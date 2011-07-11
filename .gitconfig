@@ -5,6 +5,7 @@
 	ui = auto
 [core]
 	editor = vim
+	pager = less -rX
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpserverport = 587
