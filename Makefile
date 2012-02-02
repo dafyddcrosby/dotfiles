@@ -1,4 +1,4 @@
-HOMEFILES=.bash_profile .bashrc .gitconfig .screenrc .vimrc
+HOMEFILES=.cvsrc .bash_profile .bashrc .gitconfig .screenrc .vimrc
 
 install:
 	cp $(HOMEFILES) ~
