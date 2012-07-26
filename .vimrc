@@ -9,6 +9,11 @@ set display+=lastline
 set ai " Set autoindent
 set si "Smart indent
 
+" Fix staircase pasting
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 au BufRead,BufNewFile *php set softtabstop=4
 
 " Number of spaces to use for an indent.
