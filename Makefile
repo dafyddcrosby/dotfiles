@@ -1,6 +1,6 @@
-HOMEFILES=.cvsrc .bash_profile .bashrc .gitconfig .screenrc .vimrc
+HOMEFILES=.cvsrc .bash_profile .bashrc .gitconfig .screenrc .vimrc .vim
 
 install:
-	cp $(HOMEFILES) ~
+	cp -r $(HOMEFILES) ~
 clean:
 	rm -rf *~
