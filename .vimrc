@@ -7,12 +7,24 @@ set linebreak
 set display+=lastline
 
 set ai " Set autoindent
-set si "Smart indent
+set si " Smart indent
+
+" Set wildcard ignores
+set wildignore=*.o,*.obj,*.bak,*.exe,*~
 
 " Fix staircase pasting
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
+
+" Use the Vim 7 spellchecker
+au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README* set spell
+
+" code-folding settings
+set foldmethod=indent
+set foldnestmax=10
+set foldenable
+set foldlevel=0
 
 au BufRead,BufNewFile *php set softtabstop=4
 
