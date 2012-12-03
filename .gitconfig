@@ -11,3 +11,11 @@
 	smtpserverport = 587
 	smtpencryption = tls
 	smtpuser = dtcrsby@gmail.com
+[merge]
+        tool = meld
+[alias]
+	amend = commit --amend
+	co = checkout
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
