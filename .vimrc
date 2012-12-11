@@ -14,7 +14,6 @@ set display+=lastline
 set ai " Set autoindent
 set si " Smart indent
 
-set digraph
 set list listchars=tab:»-,trail:·
 highlight SpecialKey ctermfg=darkblue ctermbg=white
 
@@ -28,6 +27,9 @@ set ruler " display cursor position
 set wildignore=*.o,*.obj,*.bak,*.exe,*~
 
 set ignorecase " Case-insensitive matching
+
+" Trim trailing whitespace on certain files
+autocmd FileType c,cpp,java,php,python,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " Fix staircase pasting
 nnoremap <F2> :set invpaste paste?<CR>
@@ -59,8 +61,8 @@ au BufNewFile *.c,*.h set shiftwidth=4
 " For the amount of space used for a new tab use shiftwidth.
 " Python: 8
 " C: 8
-au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=8
-au BufRead,BufNewFile *php set tabstop=4
+au BufRead,BufNewFile *pyw,*.c,*.h set tabstop=8
+au BufRead,BufNewFile *php,*py set tabstop=4
 
 " Replace tabs with the equivalent number of spaces.
 " Also have an autocmd for Makefiles since they require hard tabs.
