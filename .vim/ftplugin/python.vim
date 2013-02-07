@@ -6,7 +6,7 @@ setlocal autoindent
 setlocal smarttab
 
 " code-folding settings
-setlocal foldmethod=indent
-setlocal foldnestmax=10
-setlocal foldenable
-setlocal foldlevel=0
+"setlocal foldmethod=indent
+"setlocal foldnestmax=10
+"setlocal foldenable
+"setlocal foldlevel=0

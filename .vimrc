@@ -38,6 +38,13 @@ set showmode
 
 filetype plugin on
 
+filetype on
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'Valloric/YouCompleteMe'
+
 " Use the Vim 7 spellchecker
 au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README* set spell
 
