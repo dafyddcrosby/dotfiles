@@ -21,3 +21,5 @@
 	ls = ls-files
 [push]
 	default = matching
+[github]
+	user = dafyddcrosby
