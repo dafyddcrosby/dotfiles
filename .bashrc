@@ -42,7 +42,21 @@ export PS1="[\u@\h \W]$ "
 export EDITOR=/usr/bin/vim
 export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME=Dafydd Crosby
-alias "ls"="ls --color=auto"
+
+# Bunch of handy aliases
+alias ls='ls --color=auto'
+alias df='df -H'
+alias wget='wget -c'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias ll='ls -la'
+
+alias urlheader='curl -I'
+alias urlheadergzip='curl -I --compress'
+
+alias netstatports='netstat -tulanp'
+
 
 if [ -f /etc/bash_completion ]; then
  . /etc/bash_completion
