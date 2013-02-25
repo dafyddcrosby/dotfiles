@@ -45,6 +45,8 @@ source ~/.vim/vundle.vim
 filetype plugin on
 filetype on
 
+let g:ycm_filetype_specific_completion_to_disable = ['rst']
+
 " Use the Vim 7 spellchecker
 au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README* set spell
 
