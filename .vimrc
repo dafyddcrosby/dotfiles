@@ -65,6 +65,8 @@ endfunction
 command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces())
 
+let g:ycm_filetype_specific_completion_to_disable = ['rst', 'mkd', 'txt']
+
 " Use the Vim 7 spellchecker
 au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README* set spell
 
