@@ -100,3 +100,5 @@ au BufRead,BufNewFile *.c,*.h set textwidth=79
 " Python: not needed
 " C: prevents insertion of '*' at the beginning of every line in a comment
 au BufRead,BufNewFile *.c,*.h set formatoptions-=c formatoptions-=o formatoptions-=r
+
+source ~/.vim/abbrev.vim
