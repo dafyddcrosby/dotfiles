@@ -89,13 +89,6 @@ set dictionary+=/usr/share/dict/words
 " Have gitgutter ignore whitespace
 let g:gitgutter_diff_args = '-w'
 
-" pomodoro plugin
-" let g:pomodoro_time_work = 25
-" let g:pomodoro_time_slack = 5
-" let g:pomodoro_do_log = 0
-" let g:pomodoro_log_file = "/tmp/pomodoro.log"
-" set statusline=%#ErrorMsg#%{PomodoroStatus()}%#StatusLine#
-
 " Startify options
 let g:startify_custom_footer = ':help startify for more options'
 
