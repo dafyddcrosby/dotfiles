@@ -1,5 +1,5 @@
 iab mycopyright# 
-\Copyright (c) 2013, Dafydd Crosby
+\Copyright (c) YEAR, Dafydd Crosby
 \All Rights Reserved.
 
 iab bsdlicense# 

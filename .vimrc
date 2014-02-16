@@ -70,35 +70,36 @@ let g:ycm_filetype_specific_completion_to_disable = ['rst', 'mkd', 'txt']
 " Use the Vim 7 spellchecker
 au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README* set spell
 
-" Number of spaces to use for an indent.
-" This will affect Ctrl-T and 'autoindent'.
-" C: 8 spaces (pre-existing files) or 4 spaces (new files)
-au BufRead *.c,*.h set shiftwidth=8
-au BufNewFile *.c,*.h set shiftwidth=4
-
-" Number of spaces that a pre-existing tab is equal to.
-" For the amount of space used for a new tab use shiftwidth.
-" C: 8
-au BufRead,BufNewFile *.c,*.h set tabstop=8
-
-" Replace tabs with the equivalent number of spaces.
-" Also have an autocmd for Makefiles since they require hard tabs.
-" C: no
-" Makefile: no
-au BufRead,BufNewFile *.c,*.h set noexpandtab
-au BufRead,BufNewFile Makefile* set noexpandtab
-
-" Wrap text after a certain number of characters
-" C: 79
-au BufRead,BufNewFile *.c,*.h set textwidth=79
-
-" Turn off settings in 'formatoptions' relating to comment formatting.
-" - c : do not automatically insert the comment leader when wrapping based on
-"    'textwidth'
-" - o : do not insert the comment leader when using 'o' or 'O' from command mode
-" - r : do not insert the comment leader when hitting <Enter> in insert mode
-" Python: not needed
-" C: prevents insertion of '*' at the beginning of every line in a comment
-au BufRead,BufNewFile *.c,*.h set formatoptions-=c formatoptions-=o formatoptions-=r
-
+" Source personal abbreviations
 source ~/.vim/abbrev.vim
+
+" Use tag file in .git, no cscope
+set nocst
+set tags+=./.git/tags,.././.git/tags,../.././.git/tags,../../.././.git/tags
+
+" Toggle taglist window
+nnoremap <silent> <F8> :TlistToggle<CR>
+
+" Add a thesaurus
+set thesaurus+=/home/dave/Documents/mthesaur.txt
+
+" Add a dictionary
+set dictionary+=/usr/share/dict/words
+
+" Have gitgutter ignore whitespace
+let g:gitgutter_diff_args = '-w'
+
+" pomodoro plugin
+" let g:pomodoro_time_work = 25
+" let g:pomodoro_time_slack = 5
+" let g:pomodoro_do_log = 0
+" let g:pomodoro_log_file = "/tmp/pomodoro.log"
+" set statusline=%#ErrorMsg#%{PomodoroStatus()}%#StatusLine#
+
+" Startify options
+let g:startify_custom_footer = ':help startify for more options'
+
+" Set omnicompletion
+set omnifunc=syntaxcomplete#Complete
+
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/vimwiki_html/'}, {'path': '~/daveops', 'path_html': '~/daveops_html'}]
