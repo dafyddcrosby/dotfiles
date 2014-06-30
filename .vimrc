@@ -14,7 +14,6 @@ set display+=lastline
 set ai " Set autoindent
 set si " Smart indent
 
-set list listchars=tab:»-,trail:·
 highlight SpecialKey ctermfg=darkblue ctermbg=white
 
 let python_space_errors = 1
