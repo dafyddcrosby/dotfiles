@@ -42,6 +42,7 @@ export PS1="[\u@\h \W]$ "
 export EDITOR=/usr/bin/vim
 export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME=Dafydd Crosby
+export CVS_RSH=/usr/bin/ssh
 
 # Bunch of handy aliases
 alias ls='ls --color=auto'
@@ -52,6 +53,11 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias ll='ls -la'
 alias empdirs='find . -type d -empty -exec rmdir {} \;'
+
+alias e='emacsclient'
+alias ec='emacsclient'
+alias es='emacs --daemon'
+
 
 alias urlheader='curl -I'
 alias urlheadergzip='curl -I --compress'
