@@ -17,6 +17,12 @@ set si " Smart indent
 set list listchars=tab:»-,trail:·
 highlight SpecialKey ctermfg=darkblue ctermbg=white
 
+" Use solarized
+set background=dark
+set term=screen-256color
+colorscheme solarized
+let g:solarized_termcolors=256
+
 let python_space_errors = 1
 
 set wildmenu " command-line completion
