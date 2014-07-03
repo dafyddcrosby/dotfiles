@@ -21,6 +21,7 @@ color hdrdefault white black # headers white on black
 color header brightgreen black ^From: # sender's name in green
 color quoted cyan black # quoted text in blue
 color signature red black # signature in red
+# source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
 
 # Keybindings
 # TODO use file
