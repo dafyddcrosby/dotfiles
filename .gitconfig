@@ -1,6 +1,6 @@
 [user]
-	email = dtcrsby@gmail.com
-	name = Dafydd Crosby
+	email = dave@dafyddcrosby.com
+	name = David Crosby
 [color]
 	ui = auto
 [core]
@@ -17,6 +17,7 @@
 [alias]
 	aa = annex add
 	amend = commit --amend
+	addnows = !sh -c 'git diff -w --no-color "$@" | git apply --cached --ignore-whitespace' -
 	br = branch
 	brr = branch -r
 	co = checkout
@@ -29,6 +30,7 @@
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
 	pnotes = grep -n --break --heading --color=auto -e BUG -e TODO -e FIXME -e XXX
+	por = push origin
 	pum = pull upstream master
 	st = status
 	stat = status
