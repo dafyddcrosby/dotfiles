@@ -66,6 +66,12 @@ command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces())
 
 let g:ycm_filetype_specific_completion_to_disable = ['rst', 'mkd', 'txt']
 
+" Use solarized
+set background=dark
+set term=screen-256color
+colorscheme solarized
+let g:solarized_termcolors=256
+
 " Use the Vim 7 spellchecker
 au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README* set spell
 

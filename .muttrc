@@ -1,0 +1,31 @@
+set realname = "David Crosby"
+set from = "David Crosby <dave@dafyddcrosby.com>"
+set signature="~/.signature"
+
+set header_cache = ~/.cache/mutt
+
+# Sorting preferences
+set sort = threads
+set sort_browser = date
+set sort_aux = reverse-last-date-received
+
+# Copy outgoing emails
+set copy=yes
+
+# Collapse preferences
+set collapse_unread=yes
+set uncollapse_jump=yes
+
+# Color!
+color hdrdefault white black # headers white on black
+color header brightgreen black ^From: # sender's name in green
+color quoted cyan black # quoted text in blue
+color signature red black # signature in red
+# source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+
+# Keybindings
+# TODO use file
+bind index G imap-fetch-mail
+
+# Macros
+source ~/.mutt/macros
