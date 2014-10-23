@@ -1,3 +1,7 @@
+ab Xit \textit{}
+
+ab Xbf \textbf{}
+
 iab mycopyright# 
 \Copyright (c) YEAR, Dafydd Crosby
 \All Rights Reserved.
