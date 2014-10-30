@@ -14,14 +14,7 @@ set display+=lastline
 set ai " Set autoindent
 set si " Smart indent
 
-set list listchars=tab:»-,trail:·
 highlight SpecialKey ctermfg=darkblue ctermbg=white
-
-" Use solarized
-set background=dark
-set term=screen-256color
-colorscheme solarized
-let g:solarized_termcolors=256
 
 let python_space_errors = 1
 
@@ -72,6 +65,12 @@ command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces())
 
 let g:ycm_filetype_specific_completion_to_disable = ['rst', 'mkd', 'txt']
+
+" Use solarized
+set background=dark
+set term=screen-256color
+colorscheme solarized
+let g:solarized_termcolors=256
 
 " Use the Vim 7 spellchecker
 au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README* set spell
