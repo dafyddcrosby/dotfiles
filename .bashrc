@@ -44,6 +44,14 @@ export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME=Dafydd Crosby
 export CVS_RSH=/usr/bin/ssh
 
+# One-letter aliases
+alias c='cd'
+alias e='emacsclient'
+alias g='git'
+alias l='ls'
+alias s='ssh'
+alias v='vim'
+
 # Bunch of handy aliases
 alias ls='ls --color=auto'
 alias df='df -H'
@@ -53,8 +61,8 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias ll='ls -la'
 alias empdirs='find . -type d -empty -exec rmdir {} \;'
+alias ducks='du -cks * | sort -rn | head'
 
-alias e='emacsclient'
 alias ec='emacsclient'
 alias es='emacs --daemon'
 
