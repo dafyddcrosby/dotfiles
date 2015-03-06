@@ -66,11 +66,7 @@ command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces())
 
 let g:ycm_filetype_specific_completion_to_disable = ['rst', 'mkd', 'txt']
 
-" Use solarized
-set background=dark
-set term=screen-256color
-colorscheme solarized
-let g:solarized_termcolors=256
+source ~/.vim/themes.vim
 
 " Use the Vim 7 spellchecker
 au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README* set spell
@@ -91,29 +87,13 @@ set thesaurus+=/home/dave/Documents/mthesaur.txt
 " Add a dictionary
 set dictionary+=/usr/share/dict/words
 
-" Have gitgutter ignore whitespace
-let g:gitgutter_diff_args = '-w'
-
-" Startify options
-let g:startify_custom_footer = ':help startify for more options'
+let g:gitgutter_diff_args = '--patience -w'
 
 " Set omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/vimwiki_html/'}, {'path': '~/daveops', 'path_html': '~/daveops_html'}]
 
-function! s:Underline(chars)
-  let chars = empty(a:chars) ? '-' : a:chars
-  let nr_columns = virtcol('$') - 1
-  let uline = repeat(chars, (nr_columns / len(chars)) + 1)
-  put =strpart(uline, 0, nr_columns)
-endfunction
-command! -nargs=? Underline call s:Underline(<q-args>)
+source ~/.vim/underline.vim
 
-nnoremap gu- :Underline -<CR>
-nnoremap gu= :Underline =<CR>
-
-" Add more language syntax support for reStructuredText code blocks
-if !exists('g:rst_syntax_code_list')
-    let g:rst_syntax_code_list = ['vim', 'java', 'cpp', 'lisp', 'php', 'python', 'perl', 'ruby', 'javascript', 'tcl', 'html']
-endif
+source ~/.vim/rst_syntax.vim
