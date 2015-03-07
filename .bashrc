@@ -43,6 +43,7 @@ export EDITOR=/usr/bin/vim
 export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME=David Crosby
 export CVS_RSH=/usr/bin/ssh
+export TZ=US/Edmonton
 
 # One-letter aliases
 alias c='cd'
@@ -66,9 +67,7 @@ alias ducks='du -cks * | sort -rn | head'
 alias ec='emacsclient'
 alias es='emacs --daemon'
 
-
-alias urlheader='curl -I'
-alias urlheadergzip='curl -I --compress'
+alias gcp='git com ; git pum'
 
 alias netstatports='netstat -tulanp'
 
