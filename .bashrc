@@ -43,7 +43,7 @@ export EDITOR=/usr/bin/vim
 export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME=David Crosby
 export CVS_RSH=/usr/bin/ssh
-export TZ=US/Edmonton
+export TZ=America/Edmonton
 
 # One-letter aliases
 alias c='cd'
