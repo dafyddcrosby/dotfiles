@@ -73,7 +73,7 @@ colorscheme solarized
 let g:solarized_termcolors=256
 
 " Use the Vim 7 spellchecker
-au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README* set spell
+au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README*,*.tex set spell
 
 " Source personal abbreviations
 source ~/.vim/abbrev.vim
