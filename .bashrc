@@ -41,8 +41,9 @@ export PS1="[\u@\h \W]$ "
 
 export EDITOR=/usr/bin/vim
 export DEBEMAIL=dtcrsby@gmail.com
-export DEBFULLNAME=Dafydd Crosby
+export DEBFULLNAME=David Crosby
 export CVS_RSH=/usr/bin/ssh
+export TZ=America/Edmonton
 
 # One-letter aliases
 alias c='cd'
@@ -67,12 +68,11 @@ alias ec='emacsclient'
 alias es='emacs --daemon'
 
 alias battery='sysctl hw.sensors.acpibat0'
-
-alias urlheader='curl -I'
-alias urlheadergzip='curl -I --compress'
+alias gcp='git com ; git pum'
 
 alias netstatports='netstat -tulanp'
 
+alias daveops='cd ~/src/daveops.net/posts'
 
 if [ -f /etc/bash_completion ]; then
  . /etc/bash_completion

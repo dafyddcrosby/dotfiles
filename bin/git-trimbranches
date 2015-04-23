@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+# git-trimbranches
+# Removes branches on a remote that are subsets of its master branch, then also
+# deletes local copies of those branches if they exist. Handy for removing old
+# topic branches that you've already merged.
+#
+# It operates on the remote tracked by your local master branch (usually
+# 'origin'), and it skips branches with names containing the words master,
+# dogfood, staging, production, or stable.
+#
+# Usage:
+#   git trimbranches
+#
+
+function echo_in_bold_and_run {
+  printf "\033[1m%s\033[0m\n" "$1"
+  return_value=$(eval "$1 2>&1")
+}
+
+function local_branch_exists {
+  git branch | grep "$1" > /dev/null
+  return $?
+}
+
+
+echo_in_bold_and_run 'git fetch'
+
+echo_in_bold_and_run 'git config --get branch.master.remote'
+remote="$return_value"
+
+echo_in_bold_and_run "git remote prune $remote"
+
+echo_in_bold_and_run "git branch -r --merged $remote/master | grep '^  $remote/' | egrep -v 'master|dogfood|staging|production|stable'"
+remote_branches="$return_value"
+merged_remote_branch_count=$(echo "$remote_branches" | wc -w | sed 's/ //g')
+echo "Found $merged_remote_branch_count branches on $remote which are already contained in $remote/master."
+echo
+
+for branch in $remote_branches; do
+  sha=$(git rev-parse --short "$branch")
+  branch_without_remote_prefix=$(echo "$branch" | sed "s/^$remote\/\(.*\)/\1/")
+  echo_in_bold_and_run "git push $remote :$branch_without_remote_prefix"
+  echo "$return_value (was $sha)"
+  if local_branch_exists "$branch_without_remote_prefix"; then
+    echo_in_bold_and_run "git branch -d $branch_without_remote_prefix"
+    echo "$return_value"
+  fi
+done

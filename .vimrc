@@ -66,11 +66,7 @@ command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces())
 
 let g:ycm_filetype_specific_completion_to_disable = ['rst', 'mkd', 'txt']
 
-" Use solarized
-set background=dark
-set term=screen-256color
-colorscheme solarized
-let g:solarized_termcolors=256
+source ~/.vim/themes.vim
 
 " Use the Vim 7 spellchecker
 au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README*,*.tex set spell
@@ -91,13 +87,13 @@ set thesaurus+=/home/dave/Documents/mthesaur.txt
 " Add a dictionary
 set dictionary+=/usr/share/dict/words
 
-" Have gitgutter ignore whitespace
-let g:gitgutter_diff_args = '-w'
-
-" Startify options
-let g:startify_custom_footer = ':help startify for more options'
+let g:gitgutter_diff_args = '--patience -w'
 
 " Set omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/vimwiki_html/'}, {'path': '~/daveops', 'path_html': '~/daveops_html'}]
+
+source ~/.vim/underline.vim
+
+source ~/.vim/rst_syntax.vim
