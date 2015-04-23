@@ -66,6 +66,7 @@ alias ducks='du -cks * | sort -rn | head'
 alias ec='emacsclient'
 alias es='emacs --daemon'
 
+alias battery='sysctl hw.sensors.acpibat0'
 
 alias urlheader='curl -I'
 alias urlheadergzip='curl -I --compress'
