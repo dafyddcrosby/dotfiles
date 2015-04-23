@@ -38,12 +38,9 @@ export PS1="[\u@\h \W]$ "
 # \! : the history number of this command
 # \# : the command number of this command
 # \$ : if the effective UID is 0, a #, otherwise a $
-
-export EDITOR=/usr/bin/vim
-export DEBEMAIL=dtcrsby@gmail.com
-export DEBFULLNAME=David Crosby
-export CVS_RSH=/usr/bin/ssh
-export TZ=America/Edmonton
+if [ -f ~/.profile ]; then
+ . ~/.profile
+fi
 
 # One-letter aliases
 alias c='cd'
@@ -67,7 +64,6 @@ alias ducks='du -cks * | sort -rn | head'
 alias ec='emacsclient'
 alias es='emacs --daemon'
 
-alias battery='sysctl hw.sensors.acpibat0'
 alias gcp='git com ; git pum'
 
 alias netstatports='netstat -tulanp'
