@@ -1,6 +1,7 @@
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
 export PATH HOME TERM
 
+export PS1="[\u@\h \W]$ "
 export CVSROOT=anoncvs@anoncvs.ca.openbsd.org:/cvs
 export MANPAGER=/usr/bin/less
 export PAGER=/usr/bin/less
@@ -29,4 +30,4 @@ alias gcp='git com ; git pum'
 alias wget='wget -c'
 
 alias df='df -H'
-
+alias ll='ls -al'
