@@ -18,6 +18,8 @@ if [ -f ~/.profile ]; then
  . ~/.profile
 fi
 
+set bell-style visible
+
 # Bunch of handy aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
