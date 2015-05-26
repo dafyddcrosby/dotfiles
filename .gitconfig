@@ -26,14 +26,16 @@
 	com = checkout master
 	ctags = !.git/hooks/ctags
 	df = diff
+	grepi = grep -i
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
 	pnotes = grep -n --break --heading --color=auto -e BUG -e TODO -e FIXME -e XXX
 	por = push origin
 	pum = pull upstream master
-	st = status
-	stat = status
+	st = status -s -b
+	stat = status -s -b
+	status = status -s -b
 	this = !git init && git add . && git commit -m \"initial commit\"
 	who = !git shortlog -s -- | sort -n -r
 [push]
