@@ -2,6 +2,7 @@ PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/
 export PATH HOME TERM
 
 export PS1="[\u@\h \W]$ "
+export HISTFILE=/home/dave/.sh_history
 export CVSROOT=anoncvs@anoncvs.ca.openbsd.org:/cvs
 export MANPAGER=/usr/bin/less
 export PAGER=/usr/bin/less
@@ -15,6 +16,11 @@ export TZ=America/Edmonton
 export GOPATH=$HOME/go
 export GOROOT=$HOME/goroot
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+if [[ "$SHELL" == "/bin/ksh" ]]
+then
+	set -o emacs
+fi
 
 # One-letter aliases
 alias c='cd'
