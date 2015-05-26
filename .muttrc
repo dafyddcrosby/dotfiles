@@ -42,9 +42,14 @@ color quoted cyan black # quoted text in blue
 color signature red black # signature in red
 # source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
 
+set certificate_file=~/.mutt/certificates
+
 # Keybindings
 # TODO use file
 bind index G imap-fetch-mail
+
+# Mailing lists
+source ~/.mutt/mailing_lists
 
 # Macros
 source ~/.mutt/macros
