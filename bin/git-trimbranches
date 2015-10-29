@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # git-trimbranches
 # Removes branches on a remote that are subsets of its master branch, then also
