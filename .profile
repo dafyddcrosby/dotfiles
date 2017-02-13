@@ -35,10 +35,10 @@ alias l='ls'
 alias s='ssh'
 alias v='vim'
 
-alias ls="/usr/local/bin/colorls -FG"
-alias battery='sysctl hw.sensors.acpibat0'
+# alias ls="/usr/local/bin/colorls -FG" # OpenBSD
+# alias battery='sysctl hw.sensors.acpibat0' # OpenBSD
 alias gcp='git com ; git pum'
 alias wget='wget -c'
 
-alias df='df -H'
+alias df='df -h'
 alias ll='ls -al'
