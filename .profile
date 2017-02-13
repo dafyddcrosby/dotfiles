@@ -13,6 +13,9 @@ export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME="David Crosby"
 export CVS_RSH=/usr/bin/ssh
 export TZ=America/Edmonton
+export LC_CTYPE=en_US.UTF-8
+
+export PATH=$PATH:/home/dave/.cargo/bin
 
 # Go initialization
 export GOPATH=$HOME/go
