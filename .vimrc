@@ -97,3 +97,10 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/vimwiki_html/'}, {'
 source ~/.vim/underline.vim
 
 source ~/.vim/rst_syntax.vim
+
+" RST tables
+let g:table_mode_corner_corner="+"
+let g:table_mode_header_fillchar="="
+
+au BufRead,BufNewFile *.rs set filetype=rust
+au filetype rust syntax on
