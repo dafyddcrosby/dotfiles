@@ -27,6 +27,7 @@
 	ctags = !.git/hooks/ctags
 	df = diff
 	grepi = grep -i
+	grepn = grep -n
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
