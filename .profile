@@ -19,8 +19,7 @@ export PATH=$PATH:/home/dave/.cargo/bin
 
 # Go initialization
 export GOPATH=$HOME/go
-export GOROOT=$HOME/goroot
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 
 if [[ "$SHELL" == "/bin/ksh" ]]
 then
