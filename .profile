@@ -30,6 +30,7 @@ fi
 alias c='cd'
 alias e='emacsclient'
 alias g='git'
+alias gg='git grep'
 alias l='ls'
 alias s='ssh'
 alias v='vim'
