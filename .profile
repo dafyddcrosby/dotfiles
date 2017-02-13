@@ -1,6 +1,8 @@
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
 export PATH HOME TERM
 
+export QT_X11_NO_MITSHM=1
+
 export PS1="[\u@\h \W]$ "
 export HISTFILE=/home/dave/.sh_history
 export CVSROOT=anoncvs@anoncvs.ca.openbsd.org:/cvs
