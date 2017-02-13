@@ -7,6 +7,7 @@
 	editor = vim
 	pager = less -rX
 	excludesfile = ~/.gitignore_global
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 [sendemail]
 	smtpserver = smtp.gmail.com
 	smtpserverport = 587
@@ -24,20 +25,25 @@
 	cob = checkout -b
 	cobm = !sh -c 'git checkout "$1" master' -
 	com = checkout master
+	contributors = shortlog --summary --numbered
 	ctags = !.git/hooks/ctags
 	df = diff
+	grepfiles = grep -l
 	grepi = grep -i
 	grepn = grep -n
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ls = ls-files
+	mrb = for-each-ref --count=50 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 	pnotes = grep -n --break --heading --color=auto -e BUG -e TODO -e FIXME -e XXX
 	por = push origin
 	pum = pull upstream master
+	remotes = remote -v
 	st = status -s -b
 	stat = status -s -b
 	status = status -s -b
 	this = !git init && git add . && git commit -m \"initial commit\"
+	undo = reset --soft HEAD~
 	who = !git shortlog -s -- | sort -n -r
 [push]
 	default = matching
@@ -47,3 +53,9 @@
 	algorithm = patience
 [init]
 	templatedir = ~/.git_template
+[transfer]
+        fsckobjects = true
+[fetch]
+        fsckobjects = true
+[receive]
+        fsckObjects = true	
