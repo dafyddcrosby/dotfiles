@@ -1,4 +1,4 @@
 # Give enough cache so CDs don't skip
 cache=5000
-screenw=600
-screenh=600
+fs=1
+border=0
