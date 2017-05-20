@@ -8,3 +8,4 @@ command! -nargs=? Underline call s:Underline(<q-args>)
 
 nnoremap gu- :Underline -<CR>
 nnoremap gu= :Underline =<CR>
+nnoremap gu~ :Underline ~<CR>
