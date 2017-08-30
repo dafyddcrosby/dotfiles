@@ -53,4 +53,5 @@ bind index G imap-fetch-mail
 source ~/.mutt/mailing_lists
 
 # Macros
+macro pager d <exit><delete-message> "delete current message and exit to index"
 source ~/.mutt/macros
