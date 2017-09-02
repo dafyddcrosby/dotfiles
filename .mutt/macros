@@ -1,0 +1,1 @@
+macro pager d <exit><delete-message> "delete current message and exit to index"
