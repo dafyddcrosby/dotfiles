@@ -21,7 +21,6 @@ fi
 set bell-style visible
 
 # Bunch of handy aliases
-alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -33,7 +32,7 @@ alias es='emacs --daemon'
 
 alias netstatports='netstat -tulanp'
 
-alias daveops='cd ~/src/daveops.net/posts'
+alias daveops='cd ~/src/daveops.net/'
 
 if [ -f /etc/bash_completion ]; then
  . /etc/bash_completion
