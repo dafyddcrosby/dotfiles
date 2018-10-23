@@ -1,1 +1,5 @@
-set prefer-visible-bell
+set meta-flag off
+set input-meta off
+set output-meta off
+set convert-meta off
+set bell-style visible
