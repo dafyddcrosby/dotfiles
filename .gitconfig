@@ -45,8 +45,10 @@
 	this = !git init && git add . && git commit -m \"initial commit\"
 	undo = reset --soft HEAD~
 	who = !git shortlog -s -- | sort -n -r
+[remote]
+	pushdefault = origin
 [push]
-	default = matching
+	default = current
 [github]
 	user = dafyddcrosby
 [diff]
