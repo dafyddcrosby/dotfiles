@@ -1,3 +1,4 @@
 .*sw[ocnpm]
 .vagrant
 .kitchen
+.DS_Store
