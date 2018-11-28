@@ -104,3 +104,9 @@ let g:table_mode_header_fillchar="="
 
 au BufRead,BufNewFile *.rs set filetype=rust
 au filetype rust syntax on
+
+autocmd FileType gitcommit setlocal spell
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Since the new Mac keyboards lack an escape key, use jj to escape insert mode
+inoremap jj <ESC>
