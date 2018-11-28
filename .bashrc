@@ -34,6 +34,8 @@ alias netstatports='netstat -tulanp'
 
 alias daveops='cd ~/src/daveops.net/'
 
+alias itoonz='open -a iTunes.app'
+
 if [ -f /etc/bash_completion ]; then
  . /etc/bash_completion
 fi
