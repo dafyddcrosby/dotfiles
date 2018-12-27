@@ -20,6 +20,8 @@ fi
 
 set bell-style visible
 
+export HISTCONTROL=ignoredups
+
 # Bunch of handy aliases
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
