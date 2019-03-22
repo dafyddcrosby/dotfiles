@@ -1,10 +1,10 @@
-
 # Go initialization
 export GOPATH=$HOME/go
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:.:/home/dave/.cargo/bin
 
 export PATH HOME TERM
 
+# X Windows hack for Anki
 export QT_X11_NO_MITSHM=1
 
 export PS1="[\u@\h \W]$ "
