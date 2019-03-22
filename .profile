@@ -1,21 +1,28 @@
-PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games:.
+
+# Go initialization
+export GOPATH=$HOME/go
+PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:.:/home/dave/.cargo/bin
+
 export PATH HOME TERM
 
 export QT_X11_NO_MITSHM=1
 
 export PS1="[\u@\h \W]$ "
 export HISTFILE=/home/dave/.sh_history
-export CVSROOT=anoncvs@anoncvs.ca.openbsd.org:/cvs
 export MANPAGER=/usr/bin/less
 export PAGER=/usr/bin/less
 export EDITOR=/usr/bin/vim
-export DEBEMAIL=dtcrsby@gmail.com
-export DEBFULLNAME="David Crosby"
-export CVS_RSH=/usr/bin/ssh
+
 export TZ=America/Edmonton
 export LC_CTYPE=en_US.UTF-8
 
-export PATH=$PATH:/home/dave/.cargo/bin
+# OpenBSD contributor values
+export CVSROOT=anoncvs@anoncvs.ca.openbsd.org:/cvs
+export CVS_RSH=/usr/bin/ssh
+
+# Debian package maintainer values
+export DEBEMAIL=dtcrsby@gmail.com
+export DEBFULLNAME="David Crosby"
 
 # Go initialization
 export GOPATH=$HOME/go
