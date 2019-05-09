@@ -19,8 +19,10 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized/")
-;; (load-theme 'solarized-light t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized/")
+(load-theme 'solarized-light t)
+
+(global-set-key (kbd "M-o") 'other-window)
 
 ;; Spell checking
 (add-hook 'rst-mode-hook (lambda () (flyspell-mode 1)))
@@ -34,7 +36,6 @@
 
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-;;			 ("marmalade" . "https://marmalade-repo.org/packages/")
 			 ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
 
