@@ -22,6 +22,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized/")
 (load-theme 'solarized-light t)
 
+(global-set-key (kbd "M-o") 'other-window)
+
 ;; Spell checking
 (add-hook 'rst-mode-hook (lambda () (flyspell-mode 1)))
 
