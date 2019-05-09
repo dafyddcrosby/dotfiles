@@ -1,7 +1,7 @@
 # Go initialization
 export GOPATH=$HOME/go
 PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:.:/home/dave/.cargo/bin
-
+PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-darwin/
 export PATH HOME TERM
 
 # X Windows hack for Anki
@@ -24,8 +24,6 @@ export CVS_RSH=/usr/bin/ssh
 export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME="David Crosby"
 
-# Go initialization
-export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 if [[ "$SHELL" == "/bin/ksh" ]]

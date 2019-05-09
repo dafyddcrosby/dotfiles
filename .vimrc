@@ -115,4 +115,4 @@ nnoremap ZN :write<CR>:next<CR>
 inoremap jj <ESC>
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'bash=sh']
+let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'bash=sh', 'php']

@@ -2,9 +2,12 @@ set nocompatible " Use Vim defaults
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.vim/bundle/vim-zim/
+set rtp+=~/.vim/bundle/vim-go/
+set rtp+=~/.vim/bundle/vim-terraform/
 call vundle#begin()
 
-" It's good to keep Vundle up to date                                                                                                                                                                                                    
+" It's good to keep Vundle up to date
 Plugin 'gmarik/vundle'
 
 " Stop making machine-recognizable syntax errors
@@ -15,10 +18,14 @@ Plugin 'acustodioo/vim-tmux'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized.git'
 Plugin 'davidbeckingsale/writegood.vim'
-Plugin 'mutewinter/nginx.vim'
+Plugin 'fatih/vim-go'
+Plugin 'jakykong/vim-zim'
+Plugin 'keith/swift.vim'
+" Plugin 'mutewinter/nginx.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-haml'
+Plugin 'yosssi/vim-ace'
 " Plugin 'vimwiki/vimwiki'
 
 " There's a nice plugin that keeps your TF code looking pretty

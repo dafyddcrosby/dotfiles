@@ -19,8 +19,8 @@
  ;; If there is more than one, they won't work right.
  )
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized/")
-(load-theme 'solarized-light t)
+;; (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized/")
+;; (load-theme 'solarized-light t)
 
 ;; Spell checking
 (add-hook 'rst-mode-hook (lambda () (flyspell-mode 1)))
@@ -34,7 +34,7 @@
 
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-			 ("marmalade" . "https://marmalade-repo.org/packages/")
+;;			 ("marmalade" . "https://marmalade-repo.org/packages/")
 			 ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
 
@@ -54,8 +54,8 @@
 (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
 
-(require 'twittering-mode)
-(setq twittering-use-master-password t)
+;; (require 'twittering-mode)
+;; (setq twittering-use-master-password t)
 
 ;; Show contents of compressed files (eg tarballs)
 (auto-compression-mode 1)
@@ -64,3 +64,12 @@
 (electric-pair-mode 1)
 (electric-indent-mode 1)
 (show-paren-mode 1)
+
+(eval-after-load "slime"
+  '(progn
+     (setq common-lisp-hyperspec-root
+           "/usr/local/share/doc/hyperspec/HyperSpec/")
+     (setq common-lisp-hyperspec-symbol-table
+           (concat common-lisp-hyperspec-root "Data/Map_Sym.txt"))
+     (setq common-lisp-hyperspec-issuex-table
+           (concat common-lisp-hyperspec-root "Data/Map_IssX.txt"))))
