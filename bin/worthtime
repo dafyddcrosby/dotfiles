@@ -1,4 +1,5 @@
 #!/bin/sh
+# from https://xkcd.com/1205/
 cat <<EOM
 x is task freq, y is time shaved off
 
