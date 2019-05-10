@@ -68,6 +68,10 @@
 (electric-indent-mode 1)
 (show-paren-mode 1)
 
+(when (file-exists-p "~/.emacs.d/work/work.el")
+  (add-to-list 'load-path "~/.emacs.d/work")
+  (require 'work))
+
 (eval-after-load "slime"
   '(progn
      (setq common-lisp-hyperspec-root
