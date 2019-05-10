@@ -47,6 +47,8 @@
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
+(define-key evil-insert-state-map "jj" 'evil-normal-state)
+(define-key evil-replace-state-map "jj" 'evil-normal-state)
 ;; Evil numbers
 (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
