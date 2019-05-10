@@ -46,7 +46,10 @@
 ;; use evil for vim hawtness
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
-(evil-mode t)
+(evil-mode 1)
+;; Evil numbers
+(define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
 
 ;; Calendar
 (require 'calendar)
@@ -54,13 +57,6 @@
 (setq calendar-latitude 51.0453)
 (setq calendar-longitude -114.058)
 (setq calendar-location-name "Calgary, AB")
-
-;; Evil numbers
-(define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
-(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
-
-;; (require 'twittering-mode)
-;; (setq twittering-use-master-password t)
 
 ;; Show contents of compressed files (eg tarballs)
 (auto-compression-mode 1)
