@@ -1,6 +1,10 @@
 ;; disable the menu bar
 (menu-bar-mode 0)
 
+;; always start up a server
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 (setq font-lock-maximum-decoration t)
 (add-to-list 'auto-mode-alist
     '("\\.\\(?:gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
