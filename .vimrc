@@ -64,6 +64,11 @@ endfunction
 command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces())
 
+" Use Mac OS X clipboard
+if has('mac')
+  set clipboard=unnamed
+endif
+
 let g:ycm_filetype_specific_completion_to_disable = ['rst', 'mkd', 'txt']
 
 source ~/.vim/themes.vim
@@ -115,4 +120,4 @@ nnoremap ZN :write<CR>:next<CR>
 inoremap jj <ESC>
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'bash=sh', 'php']
+let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'bash=sh', 'php', 'css', 'javascript', 'js=javascript', 'json=javascript', 'yaml']
