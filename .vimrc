@@ -53,7 +53,7 @@ nnoremap k gk
 set backspace=2
 set backspace=indent,eol,start
 
-source ~/.vim/vundle.vim
+source ~/.vim/plug.vim
 
 filetype plugin on
 filetype on
