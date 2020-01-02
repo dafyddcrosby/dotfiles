@@ -13,7 +13,6 @@ Plug 'tpope/vim-endwise'
 
 " Language-specific plugins
 Plug 'tpope/vim-haml'
-Plug 'yosssi/vim-ace'
 Plug 'keith/swift.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
