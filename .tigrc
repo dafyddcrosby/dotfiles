@@ -1,0 +1,2 @@
+# Don't show staged changes
+set show-changes = no
