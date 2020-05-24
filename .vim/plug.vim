@@ -21,5 +21,15 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'hashivim/vim-terraform' " Terraform
 " Run terraform fmt on save - instead of whenever you remember to run it ;-)
 let g:terraform_fmt_on_save=1
+
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --rust-completer' }
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
+
 " Initialize Plug system
 call plug#end()
