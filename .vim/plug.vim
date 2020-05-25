@@ -15,6 +15,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-haml'
 Plug 'keith/swift.vim'
 Plug 'rust-lang/rust.vim'
+let g:rustfmt_autosave=1
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " There's a nice Plug that keeps your TF code looking pretty
