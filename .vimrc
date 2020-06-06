@@ -100,8 +100,6 @@ let g:gitgutter_diff_args = '--patience -w'
 " Set omnicompletion
 set omnifunc=syntaxcomplete#Complete
 
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'path_html': '~/vimwiki_html/'}, {'path': '~/daveops', 'path_html': '~/daveops_html'}]
-
 source ~/.vim/underline.vim
 
 source ~/.vim/rst_syntax.vim
