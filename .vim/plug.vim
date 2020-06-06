@@ -26,6 +26,9 @@ let g:terraform_fmt_on_save=1
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+let g:snips_author="David Crosby"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --rust-completer' }
 
 let g:UltiSnipsExpandTrigger="<tab>"
