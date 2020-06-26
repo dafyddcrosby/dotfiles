@@ -120,5 +120,7 @@ nnoremap ZN :write<CR>:next<CR>
 " Since the new Mac keyboards lack an escape key, use jj to escape insert mode
 inoremap jj <ESC>
 
+map <Leader>tt <Plug>VimwikiToggleListItem
+
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'bash=sh', 'php', 'css', 'javascript', 'js=javascript', 'json=javascript', 'yaml']
+let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'rust', 'bash=sh', 'php', 'css', 'javascript', 'js=javascript', 'json=javascript', 'yaml', 'html']
