@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+ISSUES=69
+OUTPUT_DIR=~/phrack
+mkdir -p "$OUTPUT_DIR"
+cd "$OUTPUT_DIR" || exit
+for i in $(seq 1 "$ISSUES"); do
+	curl -O "http://www.phrack.org/archives/tgz/phrack$i.tar.gz"
+	mkdir -p "$i"
+	tar zxvf "phrack$i.tar.gz" -C "$i"
+	rm "phrack$i.tar.gz"
+done 
+
