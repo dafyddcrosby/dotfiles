@@ -123,4 +123,6 @@ inoremap jj <ESC>
 map <Leader>tt <Plug>VimwikiToggleListItem
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'rust', 'bash=sh', 'php', 'css', 'javascript', 'js=javascript', 'json=javascript', 'yaml', 'html']
+let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'rust', 'bash=sh', 'php', 'css', 'javascript', 'js=javascript', 'json=javascript', 'yaml', 'html', 'go']
+
+let g:lisp_rainbow=1
