@@ -8,7 +8,8 @@ Plug 'acustodioo/vim-tmux'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'davidbeckingsale/writegood.vim'
-Plug 'jakykong/vim-zim'
+Plug 'vimoutliner/vimoutliner'
+" Plug 'jakykong/vim-zim'
 Plug 'tpope/vim-endwise'
 
 " Language-specific plugins
@@ -22,6 +23,9 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'hashivim/vim-terraform' " Terraform
 " Run terraform fmt on save - instead of whenever you remember to run it ;-)
 let g:terraform_fmt_on_save=1
+
+Plug 'junegunn/vim-easy-align', {'for': 'markdown'}
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -47,6 +51,7 @@ let g:ycm_filetype_blacklist = {
       \ 'pandoc': 1,
       \ 'infolog': 1,
       \ 'leaderf': 1,
+      \ 'votl': 1,
       \ 'mail': 1
       \}
 
