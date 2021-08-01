@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Stop making machine-recognizable syntax errors
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 
 Plug 'Raimondi/delimitMate'
 Plug 'airblade/vim-gitgutter'
