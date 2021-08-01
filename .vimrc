@@ -11,8 +11,8 @@ set wrap
 set linebreak
 set display+=lastline
 
-set ai " Set autoindent
-set si " Smart indent
+set autoindent
+set smartindent
 
 highlight SpecialKey ctermfg=darkblue ctermbg=white
 
@@ -72,10 +72,6 @@ if has('mac')
   set clipboard=unnamed
 endif
 
-let g:ycm_filetype_specific_completion_to_disable = ['rst', 'mkd', 'txt']
-
-source ~/.vim/themes.vim
-
 " Use the Vim 7 spellchecker
 au BufNewFile,BufRead *.txt,*.html,*.rst,*.md,README*,*.tex set spell
 
@@ -88,9 +84,6 @@ set tags+=./.git/tags,.././.git/tags,../.././.git/tags,../../.././.git/tags
 
 " Toggle taglist window
 nnoremap <silent> <F8> :TlistToggle<CR>
-
-" Add a thesaurus
-set thesaurus+=/home/dave/Documents/mthesaur.txt
 
 " Add a dictionary
 set dictionary+=/usr/share/dict/words
@@ -108,17 +101,10 @@ source ~/.vim/rst_syntax.vim
 let g:table_mode_corner_corner="+"
 let g:table_mode_header_fillchar="="
 
-au BufRead,BufNewFile *.rs set filetype=rust
-au filetype rust syntax on
-
 autocmd FileType gitcommit setlocal spell
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Don't know why this isn't a thing already
 nnoremap ZN :write<CR>:next<CR>
-
-" Since the new Mac keyboards lack an escape key, use jj to escape insert mode
-inoremap jj <ESC>
 
 map <Leader>tt <Plug>VimwikiToggleListItem
 
