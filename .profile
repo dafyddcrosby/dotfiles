@@ -1,14 +1,16 @@
+#!/bin/bash
 # Go initialization
 export GOPATH=$HOME/go
-PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:.:/home/dave/.cargo/bin
-PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-darwin/
+GOPATHBIN=$GOPATH/bin
+
+# Rust (Cargo) directory
+CARGOBIN=$HOME/.cargo/bin
+
+PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:.:$CARGOBIN:$GOPATHBIN
 export PATH HOME TERM
 
-# X Windows hack for Anki
-export QT_X11_NO_MITSHM=1
-
 export PS1="[\u@\h \W]$ "
-export HISTFILE=/home/dave/.sh_history
+export HISTFILE=$HOME/.sh_history
 export MANPAGER=/usr/bin/less
 export PAGER=/usr/bin/less
 export EDITOR=/usr/bin/vim
@@ -23,13 +25,6 @@ export CVS_RSH=/usr/bin/ssh
 # Debian package maintainer values
 export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME="David Crosby"
-
-export PATH=$PATH:$GOPATH/bin
-
-if [[ "$SHELL" == "/bin/ksh" ]]
-then
-	set -o emacs
-fi
 
 # One-letter aliases
 alias c='cd'

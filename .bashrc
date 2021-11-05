@@ -15,7 +15,7 @@ if [ "$PS1" ]; then
 fi
 
 if [ -f ~/.profile ]; then
- . ~/.profile
+	source ~/.profile
 fi
 
 set bell-style visible
@@ -29,17 +29,12 @@ alias fgrep='fgrep --color=auto'
 alias empdirs='find . -type d -empty -exec rmdir {} \;'
 alias ducks='du -cks * | sort -rn | head'
 
-alias ec='emacsclient'
-alias es='emacs --daemon'
-
-alias netstatports='netstat -tulanp'
-
-alias daveops='cd ~/src/daveops.net/'
+alias daveops='cd $HOME/src/daveops.net/'
 
 alias itoonz='open -a iTunes.app'
 
-if [ -f /etc/bash_completion ]; then
- . /etc/bash_completion
-fi
+alias usystemctl='systemctl --user'
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+if [ -f /etc/bash_completion ]; then
+	source /etc/bash_completion
+fi
