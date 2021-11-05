@@ -55,6 +55,7 @@
 	algorithm = patience
 [init]
 	templatedir = ~/.git_template
+	defaultBranch = main
 [transfer]
         fsckobjects = true
 [fetch]
