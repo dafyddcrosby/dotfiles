@@ -15,7 +15,7 @@ if [ "$PS1" ]; then
 fi
 
 if [ -f ~/.profile ]; then
-	source ~/.profile
+  . "$HOME/.profile"
 fi
 
 set bell-style visible
@@ -36,5 +36,9 @@ alias itoonz='open -a iTunes.app'
 alias usystemctl='systemctl --user'
 
 if [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion
+  . /etc/bash_completion
+fi
+
+if [ -f ~/.bashrc_local ]; then
+  . "$HOME/.bashrc_local"
 fi
