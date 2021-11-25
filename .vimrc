@@ -101,7 +101,9 @@ source ~/.vim/rst_syntax.vim
 let g:table_mode_corner_corner="+"
 let g:table_mode_header_fillchar="="
 
+" TODO put these in the proper places
 autocmd FileType gitcommit setlocal spell
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " Don't know why this isn't a thing already
 nnoremap ZN :write<CR>:next<CR>
@@ -109,6 +111,6 @@ nnoremap ZN :write<CR>:next<CR>
 map <Leader>tt <Plug>VimwikiToggleListItem
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'rust', 'bash=sh', 'php', 'css', 'javascript', 'js=javascript', 'json=javascript', 'yaml', 'html', 'go']
+let g:markdown_fenced_languages = ['html', 'python', 'ruby', 'rust', 'bash=sh', 'php', 'css', 'javascript', 'js=javascript', 'json=javascript', 'yaml', 'html', 'go', 'erlang', 'lisp']
 
 let g:lisp_rainbow=1
