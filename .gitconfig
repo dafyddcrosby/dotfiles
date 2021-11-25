@@ -23,8 +23,10 @@
 	brr = branch -r
 	co = checkout
 	cob = checkout -b
-	cobm = !sh -c 'git checkout "$1" master' -
-	com = checkout master
+	cobm = !sh -c 'git checkout "$1" main' -
+	cobmaster = !sh -c 'git checkout "$1" master' -
+	com = checkout main
+	comaster = checkout master
 	contributors = shortlog --summary --numbered
 	ctags = !.git/hooks/ctags
 	df = diff
@@ -37,7 +39,8 @@
 	mrb = for-each-ref --count=50 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 	pnotes = grep -n --break --heading --color=auto -e BUG -e TODO -e FIXME -e XXX
 	por = push origin
-	pum = pull upstream master
+	pum = pull upstream main
+	pumaster = pull upstream master
 	remotes = remote -v
 	st = status -s -b
 	stat = status -s -b
