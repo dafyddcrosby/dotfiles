@@ -1,2 +1,2 @@
 auto-reload yes
-browser mac-firefox-cli
+browser /usr/bin/firefox
