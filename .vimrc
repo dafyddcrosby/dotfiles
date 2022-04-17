@@ -104,6 +104,7 @@ let g:table_mode_header_fillchar="="
 " TODO put these in the proper places
 autocmd FileType gitcommit setlocal spell
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType markdown setlocal ts=4 sts=4 sw=4 expandtab
 
 " Don't know why this isn't a thing already
 nnoremap ZN :write<CR>:next<CR>
