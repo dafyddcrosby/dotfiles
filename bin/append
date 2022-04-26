@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+if [ "$2" = "" ]; then
+	echo "need 2 params"
+	exit 1
+fi
+if [ "$2" != "" ]; then
+	printf "\n" >> "$2"
+	cat "$1" >> "$2"
+fi
+rm "$1"
