@@ -1,0 +1,21 @@
+#!/bin/env ruby
+
+# WARNING: This script assumes safe input
+# don't be a dummy using this with untrusted input!
+
+require 'json'
+require 'yaml'
+require 'pathname'
+
+ARGV.each do |f|
+  if File.exist? f
+    new_filename = Pathname.new(f).basename.to_s.gsub(/.json$/,'.yaml')
+    if File.exist? new_filename
+      puts "found #{new_filename}, not clobbering"
+      next
+    end
+    content = JSON.load_file(f)
+    nf = File.new(new_filename, 'w')
+    nf.write(YAML.dump(content))
+  end
+end
