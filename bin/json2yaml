@@ -8,14 +8,14 @@ require 'yaml'
 require 'pathname'
 
 ARGV.each do |f|
-  if File.exist? f
-    new_filename = Pathname.new(f).basename.to_s.gsub(/.json$/,'.yaml')
-    if File.exist? new_filename
-      puts "found #{new_filename}, not clobbering"
-      next
-    end
-    content = JSON.load_file(f)
-    nf = File.new(new_filename, 'w')
-    nf.write(YAML.dump(content))
+  next unless File.exist? f
+
+  new_filename = Pathname.new(f).basename.to_s.gsub(/.json$/, '.yaml')
+  if File.exist? new_filename
+    puts "found #{new_filename}, not clobbering"
+    next
   end
+  content = JSON.load_file(f)
+  nf = File.new(new_filename, 'w')
+  nf.write(YAML.dump(content))
 end
