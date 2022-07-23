@@ -1,0 +1,5 @@
+REMOTE="$1"
+REPO="$2"
+BRANCH="main"
+git remote add -f "$REMOTE" "$REPO"
+git subtree add --prefix "$REMOTE" "$REMOTE" "$BRANCH"
