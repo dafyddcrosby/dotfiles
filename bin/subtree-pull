@@ -1,0 +1,4 @@
+REMOTE="$1"
+BRANCH="main"
+git fetch "$REMOTE" main
+git subtree pull --prefix "$REMOTE" "$REMOTE" "$BRANCH"
