@@ -2,3 +2,6 @@
 .vagrant
 .kitchen
 .DS_Store
+.rake_tasks~
+*.gem
+coverage
