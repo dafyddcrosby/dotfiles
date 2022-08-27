@@ -37,6 +37,8 @@ alias usystemctl='systemctl --user'
 
 alias be='bundle exec'
 
+alias fpp='fpp -c vim'
+
 if [ -f /etc/bash_completion ]; then
   . /etc/bash_completion
 fi
