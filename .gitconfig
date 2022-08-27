@@ -30,6 +30,7 @@
 	contributors = shortlog --summary --numbered
 	ctags = !.git/hooks/ctags
 	df = diff
+	dfn = diff --name-only
 	grepfiles = grep -l
 	grepi = grep -i
 	grepn = grep -n
