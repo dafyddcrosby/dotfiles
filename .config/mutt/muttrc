@@ -1,6 +1,6 @@
-source ~/.muttrc-private
+source ~/.config/mutt/muttrc-private
 set signature="~/.signature"
-set alias_file = "~/.mutt/aliases"
+set alias_file = "~/.config/mutt/aliases"
 
 # Sorting preferencesd
 set sort=threads
@@ -10,7 +10,7 @@ set sort_aux=reverse-last-date-received
 set collapse_unread=yes
 set uncollapse_jump=yes
 
-set certificate_file=~/.mutt/certificates
+set certificate_file=~/.config/mutt/certificates
 # activate TLS if available on the server
 set ssl_starttls=yes
 # always use SSL when connecting to a server
@@ -43,14 +43,14 @@ color hdrdefault white black # headers white on black
 color header brightgreen black ^From: # sender's name in green
 color quoted cyan black # quoted text in blue
 color signature red black # signature in red
-# source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+# source ~/.config/mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
 
 # Keybindings
 # TODO use file
 bind index G imap-fetch-mail
 
 # Mailing lists
-source ~/.mutt/mailing_lists
+source ~/.config/mutt/mailing_lists
 
 # Macros
-source ~/.mutt/macros
+source ~/.config/mutt/macros
