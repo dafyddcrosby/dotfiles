@@ -5,3 +5,4 @@
 .rake_tasks~
 *.gem
 coverage
+.obsidian
