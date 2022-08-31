@@ -1,0 +1,23 @@
+#!/bin/env ruby
+# frozen_string_literal: true
+
+# Takes a tab-separated CSV output from Anki and converts to a YAML file for
+# easier editing/version control. You'll need to edit the CSV headers manually,
+# doesn't look like Anki does that yet
+
+require 'csv'
+require 'yaml'
+
+e = nil
+filename = ARGV[0]
+File.open(ARGV[0]) do |f|
+  e = CSV.parse(f, col_sep: "\t", headers: true, skip_lines: /^#/)
+end
+yaml_filename = filename.gsub('.txt', '.yml')
+
+File.write(yaml_filename, YAML.dump(
+                            {
+                              'metadata' => {},
+                              'notes' => e.map(&:to_h)
+                            }
+                          ))
