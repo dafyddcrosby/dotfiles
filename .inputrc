@@ -3,3 +3,6 @@ set input-meta off
 set output-meta off
 set convert-meta off
 set bell-style visible
+
+# Handle vi mode delay when pressing ESC
+set keyseq-timeout 10
