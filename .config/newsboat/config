@@ -1,3 +1,4 @@
 auto-reload yes
 browser /usr/bin/firefox
 show-read-feeds no
+download-path "~/Downloads/%h/%n"
