@@ -28,7 +28,7 @@ export DEBFULLNAME="David Crosby"
 
 # One-letter aliases
 alias c='cd'
-alias e='emacsclient'
+alias e='emacsclient --create-frame'
 alias g='git'
 alias gg='git grep'
 alias ggv='git grep -Ovim'

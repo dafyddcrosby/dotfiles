@@ -15,7 +15,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(send-mail-function nil))
+ '(inhibit-startup-screen t)
+ '(package-selected-packages '(evil markdown-mode slime))
+ '(send-mail-function nil)
+ '(use-short-answers t)
+ '(abbrev-suggest t)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -28,9 +32,6 @@
 ;; Spell checking
 (add-hook 'rst-mode-hook (lambda () (flyspell-mode 1)))
 
-;; GnuGO
-(add-hook 'gnugo-board-mode-hook (lambda () (evil-mode -1)))
-
 ;; Abbrev
 (setq abbrev-file-name "~/.emacs.d/abbrev_defs")
 (setq save-address t)
@@ -41,11 +42,9 @@
 (package-initialize)
 
 ;; use evil for vim hawtness
-(add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
-(define-key evil-insert-state-map "jj" 'evil-normal-state)
-(define-key evil-replace-state-map "jj" 'evil-normal-state)
+(evil-set-initial-state 'help-mode 'emacs)
 ;; Evil numbers
 (define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
 (define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
@@ -69,6 +68,9 @@
   (add-to-list 'load-path "~/.emacs.d/work")
   (require 'work))
 
+;; Configure SLIME
+;; https://github.com/slime/slime
+(setq inferior-lisp-program "sbcl")
 (eval-after-load "slime"
   '(progn
      (setq common-lisp-hyperspec-root
