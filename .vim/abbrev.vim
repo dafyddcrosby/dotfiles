@@ -2,6 +2,8 @@ ab Xit \textit{}
 
 ab Xbf \textbf{}
 
+iab mdmodeline <!-- vim: set nospell: -->
+
 iab mycopyright# 
 \Copyright (c) YEAR, Dafydd Crosby
 \All Rights Reserved.
