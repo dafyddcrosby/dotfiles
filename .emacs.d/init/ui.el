@@ -8,6 +8,8 @@
 
 (setq visible-bell t)
 
+(load-theme 'tango-dark)
+
 (global-set-key (kbd "M-o") 'other-window)
 (global-set-key (kbd "C-x f") 'find-file)
 
