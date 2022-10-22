@@ -5,6 +5,7 @@
 
 (load-file "~/.emacs.d/init/ui.el")
 (load-file "~/.emacs.d/init/ruby.el")
+(load-file "~/.emacs.d/init/text.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -51,14 +52,6 @@
 (setq calendar-latitude 51.0453)
 (setq calendar-longitude -114.058)
 (setq calendar-location-name "Calgary, AB")
-
-;; Show contents of compressed files (eg tarballs)
-(auto-compression-mode 1)
-
-;; Make code prettier
-(electric-pair-mode 1)
-(electric-indent-mode 1)
-(show-paren-mode 1)
 
 (when (file-exists-p "~/.emacs.d/work/work.el")
   (add-to-list 'load-path "~/.emacs.d/work")
