@@ -44,4 +44,6 @@
   (add-to-list 'load-path "~/.emacs.d/work")
   (require 'work))
 
-
+; Have a place to put config that I'm not ready to commit to yet
+(when (file-exists-p "~/.emacs.d/init/wip.el")
+  (load-file "~/.emacs.d/init/wip.el"))
