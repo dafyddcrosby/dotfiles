@@ -14,9 +14,7 @@
  ;; If there is more than one, they won't work right.
  '(inhibit-startup-screen t)
  '(package-selected-packages '(evil markdown-mode slime))
- '(send-mail-function nil)
- '(use-short-answers t)
- '(abbrev-suggest t)
+ '(send-mail-function nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -30,8 +28,7 @@
 (add-hook 'rst-mode-hook (lambda () (flyspell-mode 1)))
 
 ;; Abbrev
-(setq abbrev-file-name "~/.emacs.d/abbrev_defs")
-(setq save-address t)
+(load-file "~/.emacs.d/init/abbrev.el")
 
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
@@ -39,12 +36,7 @@
 (package-initialize)
 
 ;; use evil for vim hawtness
-(require 'evil)
-(evil-mode 1)
-(evil-set-initial-state 'help-mode 'emacs)
-;; Evil numbers
-(define-key evil-normal-state-map (kbd "C-c +") 'evil-numbers/inc-at-pt)
-(define-key evil-normal-state-map (kbd "C-c -") 'evil-numbers/dec-at-pt)
+(load-file "~/.emacs.d/init/evil.el")
 
 ;; Calendar
 (require 'calendar)
