@@ -1,15 +1,11 @@
-;; disable the menu bar
-(menu-bar-mode 0)
-
 ;; always start up a server
 (require 'server)
 (unless (server-running-p)
   (server-start))
-(setq font-lock-maximum-decoration t)
-(add-to-list 'auto-mode-alist
-    '("\\.\\(?:gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
-(add-to-list 'auto-mode-alist
-    '("\\(Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
+
+(load-file "~/.emacs.d/init/ui.el")
+(load-file "~/.emacs.d/init/ruby.el")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
