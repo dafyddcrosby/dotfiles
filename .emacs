@@ -22,6 +22,8 @@
 (load-file "~/.emacs.d/init/abbrev.el")
 ;; Calendar
 (load-file "~/.emacs.d/init/calendar.el")
+;; Org-mode (builtin)
+(load-file "~/.emacs.d/init/org.el")
 
 (require 'package)
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
