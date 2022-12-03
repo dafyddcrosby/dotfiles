@@ -9,3 +9,8 @@
 (electric-indent-mode 1)
 (show-paren-mode 1)
 
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(auto-fill-mode 1)
+(setq-default fill-column 80)
+
+(setq-default indent-tabs-mode nil)
