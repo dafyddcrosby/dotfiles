@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# https://github.com/dylanaraps/pure-bash-bible#strip-pattern-from-end-of-string
+rstrip() {
+    # Usage: rstrip "string" "pattern"
+    printf '%s' "${1%%$2}"
+}
+
+MD_FILE="$1"
+# TODO Check that file has .md suffix
+# Check that file has .md exists
+if ! [[ -a "$MD_FILE" ]]; then
+	echo "markdown file does not exist, bailing"
+	exit 1
+fi
+# Strip .md from string, add .org suffix
+name=$(rstrip "$MD_FILE" ".md")
+ORG_FILE="$name.org"
+# Bail if .org file already exists
+if [[ -a "$ORG_FILE" ]]; then
+	echo "Org file exists, bailing"
+	exit 1
+fi
+
+# Run pandoc on file
+pandoc "$MD_FILE" -f markdown -t org -o "$ORG_FILE" 
+
+# TODO Remove CUSTOM_ID drawers
+# vim "$ORG_FILE" -S <( cat << SCRIPT
+# :g/:CUSTOM_ID:/-1,+1d
+# :wq
+# SCRIPT
+# )
