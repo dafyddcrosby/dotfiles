@@ -26,6 +26,7 @@ export HISTCONTROL=ignoredups
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias ls='ls --color=auto --ignore-backups'
 alias empdirs='find . -type d -empty -exec rmdir {} \;'
 alias ducks='du -cks * | sort -rn | head'
 
