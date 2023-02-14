@@ -4,6 +4,7 @@ set output-meta off
 set convert-meta off
 set bell-style visible
 set blink-matching-paren on
+set colored-stats on
 set colored-completion-prefix on
 set enable-bracketed-paste on
 
