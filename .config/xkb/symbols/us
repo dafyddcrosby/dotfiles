@@ -1,0 +1,9 @@
+partial alphanumeric_keys modifier_keys
+xkb_symbols "colemak_dave" {
+    include "us(colemak)"
+
+    name[Group1]= "English (Colemak-Dave)";
+
+    // Caps Lock is Left Control instead of Colemak's Backspace
+    key <CAPS> { [    Control_L,    Control_L,       Control_L,        Control_L ] };
+};
