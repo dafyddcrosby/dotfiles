@@ -26,12 +26,14 @@ export CVS_RSH=/usr/bin/ssh
 export DEBEMAIL=dtcrsby@gmail.com
 export DEBFULLNAME="David Crosby"
 
-# One-letter aliases
+# aliases
 alias c='cd'
 alias e='emacsclient --create-frame --tty'
+alias ec='emacsclient -n'
 alias g='git'
 alias gg='git grep'
 alias ggv='git grep -Ovim'
+alias slsync='sl commit -m sync'
 alias l='ls'
 alias s='ssh'
 alias v='vim'
